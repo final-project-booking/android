@@ -1,11 +1,9 @@
 
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './counterSlice';
-
+import { signUpSlice } from './SliceAction/authentication/signUpSlice';
 const store = configureStore({
   reducer: {
-    counter: counterReducer,
-    // Add other reducers here
+    userSignUp:signUpSlice
   },
 });
 
