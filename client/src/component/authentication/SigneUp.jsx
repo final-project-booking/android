@@ -5,8 +5,8 @@ import {signUpAsync} from '../../SliceAction/authentication/signUpSlice'
 const SignUp = () => {
   const [view, setView] = useState('firstView');
 
-  const dispatch=useDispatch()
-
+  // const dispatch=useDispatch()
+  
   // const user=useSelector(state=>state.)
 
   
