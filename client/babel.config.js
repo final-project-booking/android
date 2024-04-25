@@ -1,3 +1,8 @@
+
 module.exports = {
-  presets: ['module:@react-native/babel-preset'],
+  presets: [
+    '@babel/preset-env', // for compiling JavaScript to target specific environments
+    '@babel/preset-react' // for compiling React JSX syntax
+  ],
+  // You can add more Babel plugins or presets as needed
 };
