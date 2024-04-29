@@ -3,12 +3,9 @@
 import React from 'react';
 import {SafeAreaView,  StyleSheet,  Text,  useColorScheme,  View,} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import AppFace from './src/component/appFace/appFace.jsx';
-// import {NavigationContainer} from '@react-navigation/native';
-// import {createNativeStackNavigator} from '@react-navigation/native-stack';
-// import ProfileScreen from './src/component/HomePage/Home.jsx'
-// const Stack = createNativeStackNavigator();
-
+import AppFace from './src/component/appFace/appFace.js';
+import Home from './src/component/HomePage/Home.js'
+import 'react-native-gesture-handler';
 function App(){
 
 
@@ -17,16 +14,22 @@ function App(){
   return (
     // <SafeAreaView style={styles.container}>
     // <NavigationContainer>
-      <AppFace/>
+    // <View>
+    //   <Text>hello</Text>
+    // </View>
+      <Home />
    
       // </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
-    // flex:1
-  }
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default App;

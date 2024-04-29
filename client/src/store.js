@@ -4,8 +4,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
   reducer: {
-    // counter: counterReducer,
-    // Add other reducers here
+  
   },
 });
 

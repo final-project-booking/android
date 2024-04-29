@@ -1,26 +1,24 @@
 import React from 'react'
 import { View, Text, StyleSheet, ViewBase,Image,Button ,ImageBackground} from 'react-native';
 
-const appFace = ({ navigation }) => {
+const appFace = () => {
 
-  const handleButtonPress = () => {
  
-    navigation.navigate('../HomePage/Home.jsx');
-  };
 
     return (
-      <View style={styles.container}>
+      <View >
       <ImageBackground
         source={require('../../Photo/face.png')}
         style={styles.image}
       >
-      
+
         <View style={styles.content}>
-          <Button title='Get Start' onPress={handleButtonPress}  />
+          <Button title='Get Start'   />
           <Text style={styles.text}>If you have an Account? Login</Text>
           <Text style={styles.text}>If you don't have an Account? Sign Up</Text>
         </View>
       </ImageBackground>
+      
     </View>
       );
 }
@@ -30,9 +28,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
+    width: '100%',
+    height: '100%',
     alignItems: 'center',
   },
   content: {
