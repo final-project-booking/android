@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const user=require('../controller/user.js');
-const securite=require('../middelware/middleware.js')
+const securite=require('../midellware/VerifyUser.js')
 const verifyUser=require('../middelware/verifyUser.js')
 
 

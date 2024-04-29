@@ -5,10 +5,10 @@ const jwt = require('jsonwebtoken');
 module.exports = {
     register:async function(req,res){
      try {
-        const {firstName,lastName,email,password,location,gender,age,phoneNumber,role}=req.body
+        const {firstName,imgUrl,lastName,email,password,location,phoneNumber,role}=req.body
         const saltRounds = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, saltRounds);
-        const newUser=await user.create({data:{firstName,lastName,email,password:passwordHash,location,gender,age:parseInt(age),phoneNumber:parseInt(phoneNumber),role}})
+        const newUser=await user.create({data:{firstName,imgUrl,lastName,email,password:passwordHash,location,phoneNumber:parseInt(phoneNumber),role}})
         res.status(200).send(newUser)   
      } catch (error) {  
         throw error
