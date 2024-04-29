@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Image, ScrollView ,TouchableOpacity} from 'react-native';
 import EditProfile from '../editprofile/EditProfile';
-// import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-const UserProfile = ({ navigation }) => {
+// import MapView, { PROVIDER_GOOGLE } from 'UserProfile.js";serProfile.js";eact-native-maps';
+const UserProfile = () => {
   const profile = {
     name: 'John Doe',
     email: 'johndoe@example.com',
@@ -13,9 +13,12 @@ const UserProfile = ({ navigation }) => {
       longitude: -122.4324,
     }
   };
+  const handleSave = () => {
+    console.log('Changes saved');
+  };
 
   const handleEditProfile = () => {
-    navigation.navigate('EditProfile');
+    // navigation.navigate('EditProfile');
   };
 
   return (

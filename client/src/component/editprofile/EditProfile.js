@@ -1,9 +1,22 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 const EditProfile = ({ profile, onSave }) => {
-  const [editedProfile, setEditedProfile] = useState(profile);
+  const [editedProfile, setEditedProfile] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+
+  useEffect(() => {
+    console.log('Profile:', profile); // Log the profile object
+    // Update the editedProfile state whenever the profile prop changes
+    setEditedProfile({
+      name: profile ? profile.name : '',
+      email: profile ? profile.email : '',
+      password: profile ? profile.password : '',
+    });
+  }, [profile]);
 
   const handleSave = () => {
     onSave(editedProfile);
