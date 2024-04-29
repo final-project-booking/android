@@ -1,5 +1,5 @@
 const chekSignup=(req,res,next)=>{
-    const {firstName,lastName,email,password,gender,location,age,phoneNumber,speciality}=req.body
+    const {firstName,lastName,email,password,location,age,phoneNumber}=req.body
     if(!firstName){
         return res.status(400).json('write your firstName')
     }
