@@ -7,11 +7,7 @@ module.exports={
       const hotels = await hotel.findMany({
         where: {
           location: req.params.location,
-          rooms: {
-      some: {
-        availability: true
-      }
-          }
+        
         }
       });
       res.status(200).send(hotels);

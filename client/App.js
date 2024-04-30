@@ -6,17 +6,16 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import AppFace from './src/component/appFace/appFace.js';
 import Home from './src/component/HomePage/Home.js'
 import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 function App(){
 
 
 
 
   return (
-    // <SafeAreaView style={styles.container}>
-    // <NavigationContainer>
-    // <View>
-    //   <Text>hello</Text>
-    // </View>
+   
+    <NavigationContainer>
+  
       <Home />
    
       // </NavigationContainer>
