@@ -2,6 +2,8 @@ const express = require("express")
 require('dotenv').config()
 let app = express()
 const cors=require('cors')
+const ownerRouter=require('./router/owner')
+const userRouter=require('./router/user')
 
 
 const userRoute=require('./router/user')
@@ -17,6 +19,11 @@ app.use(cors())
 
 
 app.use(express.json());
+app.use('/api/search',search)
+
+
+app.use('/api/auth',userRouter)
+app.use('/api/owner',ownerRouter)
 
 
 app.use('/api/search',search)

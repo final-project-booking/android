@@ -1,8 +1,9 @@
-
 module.exports = {
-
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: ['module:metro-react-native-babel-preset', '@babel/preset-flow'],
   plugins: [
+    ['@babel/plugin-transform-class-properties', { loose: true }],
+    ['@babel/plugin-transform-private-methods', { loose: true }],
+    ['@babel/plugin-transform-private-property-in-object', { loose: true }],
     ["module:react-native-dotenv", {
       "moduleName": "@env",
       "path": ".env",
@@ -11,12 +12,12 @@ module.exports = {
       "safe": false,
       "allowUndefined": true
     }]
-  ]
-}
-
-  
-    "presets": ["module:metro-react-native-babel-preset", "@babel/preset-flow"]
-  
-  // You can add more Babel plugins or presets as needed
+  ],
 };
 
+
+  
+
+  
+   
+  
