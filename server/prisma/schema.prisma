@@ -45,7 +45,8 @@ model Hotel{
   owner Owner @relation(fields: [ownerId],references:[id])
   ownerId Int @unique
   room Room[]
-  offers Offers[]
+  offres Offer[]
+ 
 }
 enum Option {
   breakFast 
@@ -59,6 +60,8 @@ model Reservation {
  roomId Int @unique
  user User @relation(fields: [userId],references:[id])
  userId Int @unique
+ startDate DateTime
+  endDate DateTime
 }
 model Room{
   id Int @id @default(autoincrement())
@@ -103,7 +106,8 @@ model RoomChat {
    users    User  @relation(fields: [userId], references: [id])
    userId  Int 
    }
-  model Offers{
+  
+   model Offer{
   id Int   @id @default(autoincrement())
   hotel Hotel @relation(fields: [hotelId],references: [id])
   hotelId Int
