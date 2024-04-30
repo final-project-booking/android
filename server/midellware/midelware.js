@@ -1,5 +1,5 @@
 const chekSignup=(req,res,next)=>{
-    const {firstName,lastName,email,password,location,age,phoneNumber}=req.body
+    const {firstName,lastName,email,password,location,phoneNumber,imgUrl}=req.body
     if(!firstName){
         return res.status(400).json('write your firstName')
     }
@@ -16,11 +16,11 @@ const chekSignup=(req,res,next)=>{
     if(!location){
         return res.status(400).json('select your location')
     }
-     if(!age){
-        return res.status(400).json('select your age')
-    } 
     if(!phoneNumber){
         return res.status(400).json('select your phoneNumber')
+    }
+    if(!imgUrl){
+        return res.status(400).json('select your imgUrl')
     }
   
     next()

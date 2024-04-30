@@ -5,7 +5,11 @@ const cors=require('cors')
 const ownerRouter=require('./router/owner')
 const userRouter=require('./router/user')
 
+
+const userRoute=require('./router/user')
+
 const search=require('./router/search')
+
 
 
 
@@ -21,8 +25,14 @@ app.use('/api/search',search)
 app.use('/api/auth',userRouter)
 app.use('/api/owner',ownerRouter)
 
-let port = 3000
 
+app.use('/api/search',search)
+
+
+
+app.use("/api/user",userRoute)
+
+let port = 3000
 
 app.listen(port, function () {
   console.log(`listening on port ${port}`)
