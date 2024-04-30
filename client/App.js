@@ -1,6 +1,16 @@
 
 
 import React from 'react';
+
+import SigneUp from "./src/component/authentication/SigneUp.js"
+import {StyleSheet,Text,View} from "react-native"
+function App(){
+  // return <Text>hah</Text>
+  return(<SigneUp></SigneUp>)
+}
+
+
+
 import {SafeAreaView,  StyleSheet,  Text,  useColorScheme,  View,} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import AppFace from './src/component/appFace/appFace.js';
@@ -31,5 +41,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
 
 export default App;
