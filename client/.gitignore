@@ -24,6 +24,7 @@ DerivedData
 
 # Android/IntelliJ
 #
+
 build/
 .idea
 .gradle
@@ -72,6 +73,5 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-package-lock.json
 node_modules.
 
