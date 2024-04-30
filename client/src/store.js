@@ -4,8 +4,15 @@ import { configureStore } from '@reduxjs/toolkit';
 import searchHotelReducer from './SliceAction/SearchHotel';
 const store = configureStore({
   reducer: {
-  hotel:searchHotelReducer
+  hotel:searchHotelReducer,
+  userSignUp:signUpSlice,
   },
+
+
+
+   
+
+
 });
 
 export default store;
