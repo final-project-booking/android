@@ -1,14 +1,15 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import EditProfile from './src/component/editprofile/EditProfile';
+import UserProfile from './src/component/UserProfile/UserProfile'
 // import NAVSTART from './screens/Nav'
 function App() {
   // const Stack = createStackNavigator();
   return (
 <SafeAreaView style={styles.container}>
 {/* <NAVSTART/> */}
-{/* <UserProfile/> */}
-<EditProfile/>
+<UserProfile/>
+{/* <EditProfile/> */}
 </SafeAreaView>
   );                                      
 
@@ -27,14 +28,14 @@ function App() {
 // import AppFace from './src/component/appFace/appFace.js';
 // import Home from './src/component/HomePage/Home.js'
 // import 'react-native-gesture-handler';
-// function App(){
+
 
 // import OwnerProfile from './src/component/OwnerProfile/OwnerProfile';
-// import Map from './src/component/Map'  
+  
 // function App() {
 //   return (
 //     <SafeAreaView style={styles.container}>
-//       <Map />
+//       <OwnerProfile />
 //     </SafeAreaView>
 //   );
 // }
