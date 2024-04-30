@@ -30,6 +30,7 @@ enum Role {
 model Hotel{
   id Int @id @default(autoincrement())
   name String
+  imgUrl String?
   location String
   description String
   rating Int
@@ -38,6 +39,7 @@ model Hotel{
   owner Owner @relation(fields: [ownerId],references:[id])
   ownerId Int @unique
   room Room[]
+  offres Offer[]
  
 }
 enum Option {
@@ -56,6 +58,8 @@ model Reservation {
  roomId Int @unique
  user User @relation(fields: [userId],references:[id])
  userId Int @unique
+ startDate DateTime
+  endDate DateTime
 }
 model Room{
   id Int @id @default(autoincrement())
@@ -100,4 +104,10 @@ model RoomChat {
   roomId  Int
    users    User  @relation(fields: [userId], references: [id])
   userId  Int 
+   }
+   model Offer{
+  id Int   @id @default(autoincrement())
+  hotel Hotel @relation(fields: [hotelId],references: [id])
+  hotelId Int
+  offer String 
    }

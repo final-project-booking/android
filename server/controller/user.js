@@ -10,6 +10,12 @@ module.exports = {
         const saltRounds = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, saltRounds);
         const newUser=await user.create({data:{firstName,lastName,email,password:passwordHash,location,phoneNumber:parseInt(phoneNumber),role,imgUrl}})
+
+        const {firstName,imgUrl,lastName,email,password,location,phoneNumber,role}=req.body
+        const saltRounds = await bcrypt.genSalt();
+        const passwordHash = await bcrypt.hash(password, saltRounds);
+        const newUser=await user.create({data:{firstName,imgUrl,lastName,email,password:passwordHash,location,phoneNumber:parseInt(phoneNumber),role}})
+
         res.status(200).send(newUser)   
      } catch (error) {  
         throw error

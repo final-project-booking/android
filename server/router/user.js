@@ -1,7 +1,11 @@
 const router = require('express').Router();
 const user=require('../controller/user.js');
+
 const securite=require('../midellware/midelware.js')
 const verifyUser=require('../midellware/VerifyUser.js')
+
+
+
 
 
 router.post('/register',securite,user.register)
