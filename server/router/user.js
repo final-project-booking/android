@@ -11,7 +11,11 @@ const verifyUser=require('../midellware/VerifyUser.js')
 router.post('/register',securite,user.register)
 router.post('/login',user.login)
 router.get("/user",verifyUser,user.getOne)
+
+router.update("/update",user.update)
+
 router.get("/allUser",user.getAll)
+
 
 
 
